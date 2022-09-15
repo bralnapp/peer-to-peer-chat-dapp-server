@@ -3,6 +3,7 @@ const io = require("socket.io")(server, {
   cors: {
     origin: "https://radenu.vercel.app",
     methods: ['GET', "POST"],
+    credentials: true
   },
 });
 
@@ -10,7 +11,7 @@ const PORT = 4000;
 const NEW_CHAT_MESSAGE_EVENT = "newChatMessage";
 
 io.on("connection", (socket) => {
-  
+
   // Join a conversation
   const { roomId } = socket.handshake.query;
   socket.join(roomId);
