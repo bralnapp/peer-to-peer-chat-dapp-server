@@ -1,10 +1,8 @@
 const server = require("http").createServer();
 const io = require("socket.io")(server, {
   cors: {
-    origin: "*",
-    methods: ["GET", "POST", "DELETE", "PATCH", "PUT"],
-    preflightContinue: false,
-    optionsSuccessStatus: 204,
+    origin: "https://radenu.vercel.app",
+    methods: ["GET", "POST"],
   },
 });
 
