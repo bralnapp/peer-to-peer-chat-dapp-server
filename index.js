@@ -2,6 +2,7 @@ const server = require("http").createServer();
 const io = require("socket.io")(server, {
   cors: {
     origin: "*",
+    methods: ['GET', "POST"]
   },
 });
 
@@ -29,18 +30,3 @@ server.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
 });
 
-
-// in the index.js file
-
-// const express = require('express')
-// const app = express()
-// const port = 5050
-// const Gun = require('gun')
-
-// app.use(Gun.serve)
-
-// const server = app.listen(port, () => {
-//   console.log(`Gun server running on port ${port}🔥`)
-// })
-
-// Gun({ web: server })
