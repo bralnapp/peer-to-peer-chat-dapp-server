@@ -9,4 +9,5 @@ yarn install
 
 #Get your development server running.
 yarn start
+node index.js
 ```
