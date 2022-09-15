@@ -2,7 +2,9 @@ const server = require("http").createServer();
 const io = require("socket.io")(server, {
   cors: {
     origin: "*",
-    methods: ['GET', "POST"]
+    methods: ['GET', "POST"],
+    allowedHeaders: ["my-custom-header"],
+    credentials : true
   },
 });
 
