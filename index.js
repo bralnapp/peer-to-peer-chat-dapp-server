@@ -1,7 +1,7 @@
 const server = require("http").createServer();
 const io = require("socket.io")(server, {
   cors: {
-    origin: "https://radenu.vercel.app",
+    origin: "*",
     methods: ["GET", "POST"],
   },
 });
